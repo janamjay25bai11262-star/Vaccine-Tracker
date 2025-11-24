@@ -8,40 +8,32 @@ The Vaccination Tracker is a simple Python-based application that helps store an
 
 Features
 
-Add new vaccination records
+1. Add new vaccination records
+2. Update dose 1 or dose 2 status
+3. Display all stored vaccination details
+4.Easy-to-use menu-driven interface
 
-Update dose 1 or dose 2 status
-
-Display all stored vaccination details
-
-Easy-to-use menu-driven interface
 
 Technologies/Tools Used
 
-Python programming language
+1. Python programming language
+2. Basic data structures (lists & dictionaries)
+3. Command-line interface (CLI)
 
-Basic data structures (lists & dictionaries)
-
-Command-line interface (CLI)
 
 Steps to Install & Run the Project
 
-Install Python on your system (if not already installed).
+1. Install Python on your system (if not already installed).
+2. Copy the vaccination tracker code into a .py file (example: vaccination_tracker.py).
+3. Open a terminal or command prompt.
+4. Navigate to the folder where the file is saved.
+5. Run the program.
 
-Copy the vaccination tracker code into a .py file (example: vaccination_tracker.py).
-
-Open a terminal or command prompt.
-
-Navigate to the folder where the file is saved.
-
-Run the program using:
 
 Instructions for Testing
 
-Choose Add Person and enter sample details.
+1. Choose Add Person and enter sample details.
+2. Use Update Dose to mark dose 1 or dose 2 as completed.
+3. Use View Records to check if the data is updated properly.
 
-Use Update Dose to mark dose 1 or dose 2 as completed.
 
-Use View Records to check if the data is updated properly.
-
-Try adding multiple entries to test consistency.
