@@ -1,0 +1,75 @@
+# Simple Vaccination Tracker
+
+vaccination_data = []
+
+def add_person():
+    name = input("Enter name: ")
+    age = int(input("Enter age: "))
+    vaccine = input("Enter vaccine name (Covishield/Covaxin/etc): ")
+    dose1 = input("Dose 1 taken? (yes/no): ")
+    dose2 = input("Dose 2 taken? (yes/no): ")
+    
+    person = {
+        "Name": name,
+        "Age": age,
+        "Vaccine": vaccine,
+        "Dose 1": dose1,
+        "Dose 2": dose2
+    }
+    
+    vaccination_data.append(person)
+    print("Record added successfully!\n")
+
+def update_dose():
+    name = input("Enter the person's name to update: ")
+    
+    for person in vaccination_data:
+        if person["Name"].lower() == name.lower():
+            print("Record found!")
+            print("1. Update Dose 1")
+            print("2. Update Dose 2")
+            choice = int(input("Enter choice: "))
+            
+            if choice == 1:
+                person["Dose 1"] = "yes"
+            elif choice == 2:
+                person["Dose 2"] = "yes"
+            else:
+                print("Invalid choice")
+            print("Record updated!\n")
+            return
+    
+    print("Person not found!\n")
+
+def show_records():
+    if not vaccination_data:
+        print("No records found!\n")
+        return
+    
+    for person in vaccination_data:
+        print(person)
+    print()
+
+def menu():
+    while True:
+        print("---- Vaccination Tracker ----")
+        print("1. Add Person")
+        print("2. Update Dose")
+        print("3. View Records")
+        print("4. Exit")
+        
+        choice = int(input("Enter choice: "))
+        
+        if choice == 1:
+            add_person()
+        elif choice == 2:
+            update_dose()
+        elif choice == 3:
+            show_records()
+        elif choice == 4:
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice, try again!\n")
+
+menu()
